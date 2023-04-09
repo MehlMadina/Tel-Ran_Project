@@ -1,0 +1,47 @@
+.nav_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1380px;
+    margin: 19px auto;
+}
+
+.logo_block {
+    display: flex;
+    gap: 59px;
+    align-items: center;
+    width: 260px;
+}
+
+.logo_block button {
+    background-color: #339933;
+    border-radius: 5px;
+    padding: 15px 30px;
+    color: white;
+    font-size: 16px;
+    border: 1px solid #339933;
+    cursor: pointer;
+}
+
+.nav_menu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: 594px;
+    position: relative;
+}
+
+.nav_menu a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.nav_menu img {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.nav_menu .active {
+    color: #339933;
+}
