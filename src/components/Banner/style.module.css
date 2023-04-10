@@ -1,0 +1,39 @@
+.banner_section {
+    background-color: #A1E2EB;
+}
+
+.banner_sub_section {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1380px;
+    margin: 0 auto;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+}
+
+.text_sale {
+    font-size: 80px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.text_descr {
+    font-size: 63px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.info button {
+    padding: 25px 50px;
+    background-color: #ffffff;
+    border: 2px solid white;
+    border-radius: 13px;
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 50px;
+}

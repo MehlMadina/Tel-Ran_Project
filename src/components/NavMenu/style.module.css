@@ -4,6 +4,8 @@
     justify-content: space-between;
     max-width: 1380px;
     margin: 19px auto;
+    /* position: fixed; */
+    
 }
 
 .logo_block {
