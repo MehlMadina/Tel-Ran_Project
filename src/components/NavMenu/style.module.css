@@ -15,7 +15,8 @@
     width: 260px;
 }
 
-.logo_block button {
+.logo_block a {
+    text-decoration: none;
     background-color: #339933;
     border-radius: 5px;
     padding: 15px 30px;
@@ -23,6 +24,10 @@
     font-size: 16px;
     border: 1px solid #339933;
     cursor: pointer;
+}
+
+.logo_block a:hover {
+    background-color: #267226;
 }
 
 .nav_menu {

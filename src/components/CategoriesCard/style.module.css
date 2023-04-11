@@ -1,0 +1,17 @@
+.categories_card {
+    margin-top: 20px;
+}
+
+.categories_card img {
+    height: 350px;
+    width: 318px;
+    object-fit: cover;
+}
+
+.categories_card p{
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 112px;
+}

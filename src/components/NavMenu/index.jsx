@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import s from "./style.module.css";
 import logo from "../../media/logo.png";
 import shopping_bag from "../../media/shopping_bag.png";
@@ -18,7 +18,7 @@ const checkClass = ({ isActive }) => isActive ? s.active : '';
     <div className={s.nav_wrapper}>
       <div className={s.logo_block}>
         <img src={logo} alt="logo" />
-        <button> Catalog </button>
+        <Link to='/'> Catalog </Link>
       </div>
 
       <nav className={s.nav_menu}>

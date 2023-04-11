@@ -1,0 +1,41 @@
+.categories_section {
+    max-width: 1380px;
+    margin: 0 auto;
+}
+
+.categories_header {
+    display: flex;
+    align-items: center;
+    gap: 96px;
+}
+
+.categories_header h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+.categories_header button {
+    font-size: 12px;
+    font-weight: 700;
+    color: #8B8B8B;
+    padding: 8px;
+    background-color: #ffffff;
+    border: 2px solid #8B8B8B;
+    width: 128px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.categories_header button:hover {
+    background-color: #c7c7c7;
+    border: 2px solid #c7c7c7;
+    color: #ffffff;
+}
+
+.categories_group {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    margin-top: 20px;
+}

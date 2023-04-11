@@ -3,6 +3,7 @@
     justify-content: space-between;
     max-width: 1380px;
     margin: 0 auto;
+    position: relative;
 }
 
 .contacts {
@@ -26,6 +27,10 @@
     gap: 68px;
     width: 196px;
     height: 77px;
+}
+
+.social_media a:hover {
+    color: #339933;
 }
 
 .social_media a {
@@ -56,6 +61,7 @@
 .address h2 {
     font-size: 40px;
     font-weight: 600;
+    color: #000000;
     text-decoration: underline;
 }
 
@@ -68,4 +74,12 @@
 .address p {
     font-size: 18px;
     font-weight: 500;
+}
+
+.map iframe {
+    position: absolute;
+    width: 1380px;
+    height: 525px;
+    left: 0;
+    top: 300px;
 }
