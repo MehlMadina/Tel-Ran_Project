@@ -6,17 +6,19 @@ import AllProductsPage from "../../pages/AllProductsPage";
 import AllSalesPage from "../../pages/AllSalesPage";
 import BasketPage from "../../pages/BasketPage";
 import NotFoundPage from "../../pages/NotFoundPage";
+import AllCategoriesPage from "../../pages/AllCategoriesPage";
 
 function App() {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<MainPage />}/>
-          <Route path="products/all" element={<AllProductsPage />}/>
-          <Route path="sales/all" element={<AllSalesPage />}/>
-          <Route path="basket" element={<BasketPage />}/>
-          <Route path="*" element={<NotFoundPage />}/>
+          <Route index element={<MainPage />} />
+          <Route path="products/all" element={<AllProductsPage />} />
+          <Route path="sales" element={<AllSalesPage />} />
+          <Route path="basket" element={<BasketPage />} />
+          <Route path="category" element={<AllCategoriesPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </div>

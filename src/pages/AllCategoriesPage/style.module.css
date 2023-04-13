@@ -1,0 +1,16 @@
+.categories_section {
+    max-width: 1380px;
+    margin: 0 auto;
+}
+
+.categories_section h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 81px;
+}
+
+.categories_group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    column-gap: 26px;
+}
