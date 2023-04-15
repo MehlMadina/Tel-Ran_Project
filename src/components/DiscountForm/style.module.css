@@ -1,0 +1,67 @@
+.discount_form_section {
+    background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
+    height: 476px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.discount_form_section img {
+    height: 422px;
+    width: 422px;
+    margin-top: 27px;
+}
+
+.discount_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.discount_form h1 {
+    font-size: 90px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+}
+
+.discount_form p {
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+}
+
+.discount_form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 46px;
+    gap: 30px;
+}
+
+.discount_form form::placeholder {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #6C6C6C;
+    margin-left: 30px;
+}
+
+.discount_form input {
+    width: 473px;
+    height: 75px;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    outline: none;
+}
+
+.discount_form button {
+    width: 473px;
+    height: 75px;
+    border-radius: 25px;
+    background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
+    border: 2px solid white;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    cursor: pointer;
+}
