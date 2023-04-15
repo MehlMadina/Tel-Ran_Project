@@ -1,23 +1,25 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { asyncLoadProductsAction } from '../../store/asyncAction/allProducts';
-import ProductItem from '../../components/ProductItem';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { asyncLoadProductsAction } from "../../store/asyncAction/allProducts";
+import ProductItem from "../../components/ProductItem";
+import s from "./style.module.css";
 
 export default function AllProductsPage() {
+  const dispatch = useDispatch();
 
-const dispatch = useDispatch();
+  const all_products = useSelector((state) => state.all_products);
 
-const all_products = useSelector(state => state.all_products);
-
-useEffect(() => {
-    dispatch(asyncLoadProductsAction)
-}, []);
+  useEffect(() => {
+    dispatch(asyncLoadProductsAction);
+  }, []);
 
   return (
-    <div>
-        {
-            all_products.map(el => <ProductItem key={el.id} {...el}/>)
-        }
+    <div className={s.products_container}>
+      <div className={s.products}>
+        {all_products.map((el) => (
+          <ProductItem key={el.id} {...el} />
+        ))}
+      </div>
     </div>
-  )
+  );
 }

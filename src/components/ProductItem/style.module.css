@@ -1,0 +1,10 @@
+.product_item img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.product_item a {
+    text-decoration: none;
+    color: black;
+}

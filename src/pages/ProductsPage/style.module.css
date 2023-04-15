@@ -1,0 +1,18 @@
+.products_page {
+    margin-top: 91px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.products_page h1 {
+    margin-bottom: 157px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.products {
+    margin: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 50px;
+}
