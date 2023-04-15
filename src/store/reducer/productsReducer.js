@@ -1,13 +1,14 @@
 const defaultState = [];
-const LOAD_PRODUCTS = "LOAD_PRODUCTS";
 
-export const productsLoadAction = (payload) => ({
-  type: LOAD_PRODUCTS,
+const LOAD_CATEGORY_PRODUCTS = "LOAD_CATEGORY_PRODUCTS";
+
+export const loadCategoryProductsAction = (payload) => ({
+  type: LOAD_CATEGORY_PRODUCTS,
   payload,
 });
 
-export const productsReducer = (state = defaultState, action) => {
-  if (action.type === LOAD_PRODUCTS) {
+export const categoryProductsReducer = (state = defaultState, action) => {
+  if (action.type === LOAD_CATEGORY_PRODUCTS) {
     return action.payload;
   } else {
     return state;

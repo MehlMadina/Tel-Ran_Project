@@ -1,33 +1,23 @@
-import React, { useEffect } from "react";
-import ProductsItem from "../../components/ProductsItem";
-import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import { asyncLoadProductsAction } from "../../store/asyncAction/products";
-
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { asyncLoadProductsAction } from '../../store/asyncAction/allProducts';
+import ProductItem from '../../components/ProductItem';
 
 export default function AllProductsPage() {
 
-  const { category } = useParams();
+const dispatch = useDispatch();
 
-  const dispatch = useDispatch();
+const all_products = useSelector(state => state.all_products);
 
-  useEffect(() => {
+useEffect(() => {
     dispatch(asyncLoadProductsAction)
-  }, []);
-
-  const products = useSelector(({ products }) => {
-    if (category === undefined) {
-      return products;
-    }
-     return products.filter((item) => item.category === category);
-  });
-
+}, []);
 
   return (
     <div>
-      {products.map((el) => (
-        <ProductsItem key={el.id} {...el} />
-      ))}
+        {
+            all_products.map(el => <ProductItem key={el.id} {...el}/>)
+        }
     </div>
-  );
+  )
 }
