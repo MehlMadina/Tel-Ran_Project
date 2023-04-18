@@ -15,6 +15,7 @@ export default function AllProductsPage() {
 
   return (
     <div className={s.products_container}>
+      <h2>All products</h2>
       <div className={s.products}>
         {all_products.map((el) => (
           <ProductItem key={el.id} {...el} />

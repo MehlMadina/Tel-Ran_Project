@@ -1,0 +1,10 @@
+ .products_container {
+    max-width: 1380px;
+    margin: 30px auto;
+ }
+
+ .products_container h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 81px;
+}
