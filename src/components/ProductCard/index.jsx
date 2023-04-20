@@ -20,25 +20,26 @@ export default function ProductCard({
 
   const dispatch = useDispatch();
 
-  const add_to_basket = () => dispatch(addBasket({ id, title, price, discont_price, image }));
+  const add_to_basket = () =>
+    dispatch(addBasket({ id, title, price, discont_price, image }));
 
   return (
     <div className={s.product_item}>
       <button onClick={add_to_basket}>Add to cart</button>
-      <img src={src_img} alt={title} />
-      <div className={s.price_info}>
-        {discont_price === null ? (
-          <p className={s.main_price}>{price}$</p>
-        ) : (
-          <>
-            <Link to={link}>
+      <Link to={link}>
+        <img src={src_img} alt={title} />
+        <div className={s.price_info}>
+          {discont_price === null ? (
+            <p className={s.main_price}>{price}$</p>
+          ) : (
+            <>
               <p className={s.discount_price}>{discont_price}$</p>
               <p className={s.price}>{price}$</p>
               <p className={s.sale_percentage}>{sale_percentage}%</p>
-            </Link>
-          </>
-        )}
-      </div>
+            </>
+          )}
+        </div>
+      </Link>
       <p className={s.title}>{title}</p>
     </div>
   );
