@@ -18,7 +18,7 @@ const checkClass = ({ isActive }) => isActive ? s.active : '';
     <div className={s.nav_wrapper}>
       <div className={s.logo_block}>
         <img src={logo} alt="logo" />
-        <Link to='/'> Catalog </Link>
+        <Link to='/category'> Catalog </Link>
       </div>
 
       <nav className={s.nav_menu}>

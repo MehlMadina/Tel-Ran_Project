@@ -15,7 +15,7 @@ export default function BasketPage() {
       <div className={s.basket_container}>
         <h2>Shopping cart</h2>
         <div>
-          <Link to="/">
+          <Link to="/products/all">
             Back to the store <RightOutlined className={s.arrow} />
           </Link>
         </div>

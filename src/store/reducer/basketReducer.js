@@ -1,4 +1,5 @@
-const defaultState = [];
+const defaultState = JSON.parse(localStorage.getItem("basket")) ?? [];
+const writeToLocalStorage = basket => localStorage.setItem("basket", JSON.stringify(basket));
 
 const ADD_TO_BASKET = "ADD_TO_BASKET";
 const DECREMENT_COUNT = "DECREMENT_COUNT";
@@ -17,24 +18,31 @@ const checkProduct = (state, payload) => {
   const productInState = state.find((el) => el.id === +payload.id);
   if (productInState) {
     productInState.count++;
+    writeToLocalStorage(state);
     return [...state];
   } else {
-    return [...state, { ...payload, count: 1 }];
+    const newState = [...state, { ...payload, count: 1 }];
+    writeToLocalStorage(newState);
+    return newState;
   }
 };
 
 const incrementQuantity = (state, payload) => {
   const product = state.find((el) => el.id === payload);
   product.count++;
+  writeToLocalStorage(state);
   return [...state];
 };
 
 const decrementQuantity = (state, payload) => {
   const product = state.find((el) => el.id === payload);
   if (product.count === 1) {
-    return [...state.filter((el) => el.id !== payload)];
+    const newState = [...state.filter((el) => el.id !== payload)];
+    writeToLocalStorage(newState);
+    return newState;
   } else {
     product.count--;
+    writeToLocalStorage(state)
     return [...state];
   }
 };
@@ -49,8 +57,11 @@ export const basketReducer = (state = defaultState, action) => {
   } else if (action.type === INCREMENT_COUNT) {
     return incrementQuantity(state, action.payload);
   } else if (action.type === DELETE_PRODUCT) {
-    return [...state.filter((el) => el.id !== action.payload)];
+    const newState =  [...state.filter((el) => el.id !== action.payload)];
+    writeToLocalStorage(newState);
+    return newState;
   } else if (action.type === CLEAR_BASKET) {
+    writeToLocalStorage([])
     return defaultState;
   } else {
     return state;
