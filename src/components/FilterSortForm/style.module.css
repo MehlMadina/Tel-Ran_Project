@@ -1,0 +1,63 @@
+.container {
+    max-width: 1380px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.filter_section span {
+    font-weight: 600;
+}
+
+.filter_section form input {
+    width: 103px;
+    height: 42px;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 7px;
+    margin-left: 15px;
+}
+
+.discount_checkbox {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.discount_checkbox span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.discount_checkbox input {
+    width: 40px;
+    height: 40px;
+}
+
+.sort_section {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+}
+
+.sort_section span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.sort_section select {
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 10px;
+    width: 220px;
+    color: #797979;
+}
+
+

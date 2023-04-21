@@ -5,6 +5,7 @@ import { load_products } from "../../store/asyncAction/products";
 import ProductCard from "../../components/ProductCard";
 import s from "./style.module.css";
 import { asyncLoadCategoriesAction } from "../../store/asyncAction/categories";
+import FilterSearchForm from "../../components/FilterSortForm";
 
 export default function ProductsPage() {
   const { id } = useParams();
@@ -19,19 +20,24 @@ export default function ProductsPage() {
   }, []);
 
   return (
-    <div className={s.products_page}>
-      {products.length === 0 ? (
-        <p>Products are loading...</p>
-      ) : (
-        <div>
-          <h1>{category_title}</h1>
-          <div className={s.products}>
-             {products.map((el) => (
-            <ProductCard key={el.id} {...el} />
-          ))}
+    <div>
+      <div className={s.products_page}>
+        {products.length === 0 ? (
+          <p>Products are loading...</p>
+        ) : (
+          <div>
+            <h1>{category_title}</h1>
+            <FilterSearchForm />
+            <div className={s.products}>
+              {products
+                .filter((el) => !el.hide_mark)
+                .map((el) => (
+                  <ProductCard key={el.id} {...el} />
+                ))}
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
