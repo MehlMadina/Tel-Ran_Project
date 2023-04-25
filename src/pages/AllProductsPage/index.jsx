@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { asyncLoadProductsAction } from "../../store/asyncAction/allProducts";
-import ProductItem from "../../components/ProductItem";
 import s from "./style.module.css";
+import ProductCard from "../../components/ProductCard";
 
 export default function AllProductsPage() {
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ export default function AllProductsPage() {
       <h2>All products</h2>
       <div className={s.products}>
         {all_products.map((el) => (
-          <ProductItem key={el.id} {...el} />
+          <ProductCard key={el.id} {...el} />
         ))}
       </div>
     </div>

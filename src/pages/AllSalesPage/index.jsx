@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { asyncLoadProductsAction } from "../../store/asyncAction/allProducts";
-import SaleProductCard from "../../components/SaleProductCard";
 import s from "./style.module.css";
+import ProductItem from "../../components/ProductItem";
 
 export default function AllSalesPage() {
   const dispatch = useDispatch();
@@ -17,8 +17,10 @@ export default function AllSalesPage() {
     <div className={s.products_container}>
       <h2>All sales</h2>
       <div className={s.products}>
-        {products.map((el) => (
-          <SaleProductCard key={el.id} {...el} />
+        {products
+        .filter(({ discont_price }) => discont_price !== null)
+        .map((el) => (
+          <ProductItem key={el.id} {...el}/>
         ))}
       </div>
     </div>
