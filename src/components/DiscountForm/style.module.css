@@ -3,6 +3,7 @@
     height: 476px;
     display: flex;
     justify-content: space-evenly;
+    position: relative;
 }
 
 .discount_form_section img {
@@ -52,6 +53,7 @@
     border: 2px solid transparent;
     border-radius: 25px;
     outline: none;
+    padding: 15px;
 }
 
 .discount_form button {
@@ -65,3 +67,12 @@
     font-weight: 700;
     cursor: pointer;
 }
+
+.error {
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    right: 470px;
+    top: 230px;
+}
+

@@ -4,6 +4,7 @@ import { asyncLoadProductsAction } from "../../store/asyncAction/allProducts";
 import s from "./style.module.css";
 import ProductCard from "../../components/ProductCard";
 
+
 export default function AllProductsPage() {
   const dispatch = useDispatch();
 

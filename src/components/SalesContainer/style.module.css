@@ -1,0 +1,17 @@
+.sales_section {
+    max-width: 1380px;
+    margin: 0 auto;
+}
+
+.sales_header h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+.sales_group {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    margin-top: 20px;
+}

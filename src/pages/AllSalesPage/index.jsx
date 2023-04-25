@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { asyncLoadProductsAction } from "../../store/asyncAction/allProducts";
 import s from "./style.module.css";
-import ProductItem from "../../components/ProductItem";
+import ProductCard from "../../components/ProductCard";
 
 export default function AllSalesPage() {
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ export default function AllSalesPage() {
         {products
         .filter(({ discont_price }) => discont_price !== null)
         .map((el) => (
-          <ProductItem key={el.id} {...el}/>
+          <ProductCard key={el.id} {...el}/>
         ))}
       </div>
     </div>

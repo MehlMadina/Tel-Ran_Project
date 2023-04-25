@@ -5,10 +5,43 @@ import s from "./style.module.css";
 import { RightOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import { clearBasket } from "../../store/reducer/basketReducer";
+import { useForm } from "react-hook-form";
+import { order_products } from "../../store/asyncAction/products";
 
 export default function BasketPage() {
+
   const dispatch = useDispatch();
-  const basket = useSelector((state) => state.basket);
+  const { basket, all_products } = useSelector((state) => state);
+
+  let data = basket.map((item) => {
+    const product = all_products.find(({id}) => id === item.id);
+    return {...product, ...item}
+  });
+
+  const totalPrice = data.reduce((acc, { price, discont_price, count }) => 
+  discont_price !== null
+  ? acc + discont_price * count
+  : acc + price * count, 0).toFixed(2);
+
+
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+    mode: "onBlur"
+  });
+  
+  const submit = data => {
+    dispatch(order_products({data}));
+    reset();
+  };
+  
+  const numberRegex = /^\+49\d{11}$/;
+  
+  const phoneRegister = register('phone', {
+    required: '* The field "phone" is required',
+    pattern: {
+        value: numberRegex,
+        message: '* Not valid number format'
+    }
+  });
 
   return (
     <div>
@@ -34,14 +67,18 @@ export default function BasketPage() {
         <h2>Order Details</h2>
         <div className={s.sum_block}>
           <p className={s.sum}>Total:</p>
-          <p className={s.count}>
-            {basket.reduce((prev, { price, count }) => prev + price * count, 0)}
-            $
-          </p>
+          <p className={s.count}>{totalPrice}$</p>
         </div>
         <div className={s.btn_block}>
-          <input type="tel" name="phone" placeholder="Your phone number" />
-          <button>To Order</button>
+          <form onSubmit={handleSubmit(submit)}>
+            <input type="tel" name="phone" placeholder="Your phone number" {...phoneRegister}/>
+            <button>Order</button>
+          </form>
+
+          <div className={s.error}>
+            {errors.phone && <p>{errors.phone?.message}</p>}
+          </div>
+
           <button onClick={() => dispatch(clearBasket())}>
             Clear the cart
           </button>

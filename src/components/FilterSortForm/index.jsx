@@ -27,13 +27,11 @@ export default function FilterSearchForm() {
             name="min"
             placeholder="from"
             min="0"
-            onChange={search_price}
           />
           <input
             type="number"
             name="max"
             placeholder="to"
-            onChange={search_price}
           />
           <button>Search</button>
         </form>
