@@ -30,7 +30,8 @@ export default function ProductsPage() {
             <FilterSearchForm />
             <div className={s.products}>
               {products
-                .filter((el) => !el.hide_mark)
+                .filter(({ show }) => Object.values(show).every(el => el))
+                .filter(({ show_sale }) => show_sale)
                 .map((el) => (
                   <ProductCard key={el.id} {...el} />
                 ))}
