@@ -2,6 +2,7 @@ import React from "react";
 import s from "./style.module.css";
 import { useDispatch } from "react-redux";
 import { decrementCount, deleteProduct, incrementCount } from "../../store/reducer/basketReducer";
+import { Link } from "react-router-dom";
 
 export default function BasketItem({
   id,
@@ -12,12 +13,15 @@ export default function BasketItem({
   count,
 }) {
   const src_img = `http://localhost:3333${image}`;
+  const link = `/product/${id}`;
 
   const dispatch = useDispatch();
 
   return (
     <div className={s.wrapper}>
-      <img src={src_img} alt={title} />
+      <Link to={link}>
+        <img src={src_img} alt={title} />
+      </Link>
       <div className={s.count_block}>
         <p>{title}</p>
         <div className={s.triggers}>

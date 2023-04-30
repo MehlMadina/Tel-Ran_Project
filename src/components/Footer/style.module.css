@@ -11,6 +11,7 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 25px;
+    width: 850px;
 }
 
 .contacts h1 {
@@ -75,6 +76,8 @@
     font-size: 18px;
     font-weight: 500;
 }
+
+
 
 .map iframe {
     position: absolute;

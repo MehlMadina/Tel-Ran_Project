@@ -57,7 +57,7 @@ export default function BasketPage() {
         ) : (
           <div>
             {basket.map((el) => (
-              <BasketItem key={el.id} {...el} ID={el.id} />
+              <BasketItem key={el.id} {...el} />
             ))}
           </div>
         )}

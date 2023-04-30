@@ -7,7 +7,7 @@ export default function FilterSearchForm() {
 
   const dispatch = useDispatch();
 
-  const [ price, setPrice ] = useState({min: -Infinity, max: Infinity});
+  const [ price, setPrice ] = useState({min: 0, max: Infinity});
   const [ sale, setSale ] = useState(false);
 
 
@@ -64,7 +64,7 @@ export default function FilterSearchForm() {
       <div className={s.sort_section}>
         <span>Sorted: </span>
         <select onInput={order}>
-          <option value="default">default</option>
+          <option value="default">by default</option>
           <option value="title">name</option>
           <option value="price">price</option>
         </select>

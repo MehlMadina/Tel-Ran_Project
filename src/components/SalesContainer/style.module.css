@@ -1,6 +1,6 @@
 .sales_section {
     max-width: 1380px;
-    margin: 0 auto;
+    margin: 50px auto;
 }
 
 .sales_header h1 {
@@ -10,8 +10,8 @@
 }
 
 .sales_group {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 32px;
     margin-top: 20px;
 }

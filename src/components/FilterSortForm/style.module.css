@@ -1,6 +1,6 @@
 .container {
     max-width: 1380px;
-    margin: 30px auto;
+    margin: 81px auto 34px auto;
     display: flex;
     justify-content: space-between;
 }
@@ -9,14 +9,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .filter_section span {
+    font-size: 20px;
     font-weight: 600;
 }
 
-.filter_section form input {
+.filter_section input {
     width: 103px;
     height: 42px;
     padding: 10px;
@@ -44,7 +45,7 @@
 .sort_section {
     display: flex;
     align-items: center;
-    gap: 42px;
+    gap: 40px;
 }
 
 .sort_section span {
@@ -56,7 +57,7 @@
     border: 1px solid black;
     border-radius: 7px;
     padding: 10px;
-    width: 220px;
+    width: 218px;
     color: #797979;
 }
 
