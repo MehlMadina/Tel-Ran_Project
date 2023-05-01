@@ -44,6 +44,7 @@
 .left_block img {
     width: 710px;
     height: 710px;
+    border-radius: 10px;
     object-fit: contain;
     margin-top: 34px;
     margin-bottom: 187px;

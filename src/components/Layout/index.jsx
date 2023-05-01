@@ -5,6 +5,7 @@ import s from './style.module.css';
 import { Outlet } from 'react-router-dom';
 
 export default function Layout() {
+
   return (
     <div>
         <NavMenu />

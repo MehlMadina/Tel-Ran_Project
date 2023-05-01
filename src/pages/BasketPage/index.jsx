@@ -36,7 +36,7 @@ export default function BasketPage() {
   const numberRegex = /^\+49\d{11}$/;
   
   const phoneRegister = register('phone', {
-    required: '* The field "phone" is required',
+    required: '* The field "Phone number" is required',
     pattern: {
         value: numberRegex,
         message: '* Not valid number format'
@@ -44,12 +44,12 @@ export default function BasketPage() {
   });
 
   return (
-    <div>
+    <div className={s.basket_page}>
       <div className={s.basket_container}>
         <h2>Shopping cart</h2>
-        <div>
+        <div className={s.link}>
           <Link to="/products/all">
-            Back to the store <RightOutlined className={s.arrow} />
+            Back to the store <RightOutlined />
           </Link>
         </div>
         {basket.length === 0 ? (
@@ -64,24 +64,31 @@ export default function BasketPage() {
       </div>
 
       <div className={s.basket_block}>
-        <h2>Order Details</h2>
+        <h2>Order details</h2>
         <div className={s.sum_block}>
-          <p className={s.sum}>Total:</p>
-          <p className={s.count}>{totalPrice}$</p>
+          <p className={s.sum}>Total</p>
+          <p className={s.total_price}>{totalPrice}$</p>
         </div>
         <div className={s.btn_block}>
           <form onSubmit={handleSubmit(submit)}>
-            <input type="tel" name="phone" placeholder="Your phone number" {...phoneRegister}/>
-            <button>Order</button>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone number"
+              {...phoneRegister}
+            />
+
+            <div className={s.error}>
+              {errors.phone && <p>{errors.phone?.message}</p>}
+            </div>
+
+            <div className={s.btns}>
+              <button>Order</button>
+              <button onClick={() => dispatch(clearBasket())}>
+                Clear the cart
+              </button>
+            </div>
           </form>
-
-          <div className={s.error}>
-            {errors.phone && <p>{errors.phone?.message}</p>}
-          </div>
-
-          <button onClick={() => dispatch(clearBasket())}>
-            Clear the cart
-          </button>
         </div>
       </div>
     </div>

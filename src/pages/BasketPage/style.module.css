@@ -1,0 +1,94 @@
+.basket_page {
+    max-width: 1380px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 140px;
+}
+
+.basket_container h2 {
+    margin: 30px 0 56px 0;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.basket_container {
+    display: flex;
+    flex-direction: column;
+    width: 824px;
+}
+
+.link {
+    align-self: flex-end;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 34px;
+}
+
+.basket_block {
+    border: 2px solid black;
+    border-radius: 21px;
+    width: 496px;
+    height: 510px;
+    padding: 25px;
+    margin-top: 200px;
+}
+
+.basket_block h2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.sum_block {
+    display: flex;
+    gap: 225px;
+    margin-top: 47px;
+}
+
+.sum {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.total_price {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.btns button {
+    width: 446px;
+    height: 76px;
+    background: #339933;
+    border-radius: 17px;
+    border-color: transparent;
+    font-size: 28px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.btn_block input {
+    width: 446px;
+    height: 73px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    padding: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #929292;
+    margin-top: 55px;
+}
+
+.error {
+    color: #e65757;
+    font-weight: 600;
+    
+}

@@ -3,6 +3,7 @@ import s from "./style.module.css";
 import { useDispatch } from "react-redux";
 import { decrementCount, deleteProduct, incrementCount } from "../../store/reducer/basketReducer";
 import { Link } from "react-router-dom";
+import { CloseOutlined } from '@ant-design/icons';
 
 export default function BasketItem({
   id,
@@ -36,11 +37,11 @@ export default function BasketItem({
           <p className={s.oldPrice}>{(price * count).toFixed(2)}$</p>
         </>
       ) : (
-        <p>{(price * count).toFixed(2)}$</p>
+        <p className={s.price}>{(price * count).toFixed(2)}$</p>
       )}
 
       <button className={s.del_btn} onClick={() => dispatch(deleteProduct(id))}>
-        x
+        <CloseOutlined />
       </button>
     </div>
   );
