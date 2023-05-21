@@ -1,3 +1,7 @@
+.banner_section {
+    margin-top: 90px;
+}
+
 .banner_section img {
     width: 100%;
     object-fit: cover;

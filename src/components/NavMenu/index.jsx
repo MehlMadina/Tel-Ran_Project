@@ -4,15 +4,15 @@ import s from "./style.module.css";
 import logo from "../../media/logo.png";
 import shopping_bag from "../../media/shopping_bag.png";
 import { useSelector } from "react-redux";
-import { MenuOutlined } from '@ant-design/icons'
+import { MenuOutlined, UserOutlined } from '@ant-design/icons'
 
 export default function NavMenu() {
 
-const links = [
-  { id: 1, label: "Main Page", to: "/" },
-  { id: 2, label: "All products", to: "/products/all" },
-  { id: 3, label: "All sales", to: "/sales/all" },
-];
+// const links = [
+//   { id: 1, label: "Main Page", to: "/" },
+//   { id: 2, label: "All products", to: "/products/all" },
+//   { id: 3, label: "All sales", to: "/sales/all" },
+// ];
 
 const checkClass = ({ isActive }) => isActive ? s.active : '';
 
@@ -27,30 +27,25 @@ const navBtnOnClick = () => {
 }
 
   return (
-    <div className={s.nav_wrapper}>
-      <div className={s.logo_block}>
-        <img src={logo} alt="logo" />
-        <Link to="/category"> Catalog </Link>
-      </div>
-
-      <div className={s.all_links} ref={nav_links}>
-        <nav className={s.nav_menu}>
-          <div className={s.links}>
-            {links.map(({ id, label, to }) => (
-              <NavLink key={id} to={to} className={checkClass}>
-                {label}
-              </NavLink>
-            ))}
-          </div>
-        </nav>
-        <div>
-          <NavLink to="/basket">
-            <img src={shopping_bag} alt="basket" />
-            {totalItems === 0 ? "" : totalItems}
-          </NavLink>
-        </div>
-      </div>
-      <MenuOutlined className={s.nav_btn} onClick={navBtnOnClick} />
-    </div>
+    <section className={s.nav}>
+            <div className={s.firstBlock}>
+                <NavLink to='/'><img src={logo} alt="logo" /></NavLink>
+                <NavLink to='/category'><button>Catalog</button></NavLink>
+            </div>
+            <div className={s.all_links} ref={nav_links}>
+                <div className={s.secondBlock}>
+                    <div className={s.links}>
+                        <NavLink className={checkClass} to='/'>Main page</NavLink>
+                        <NavLink className={checkClass} to='/products/all'>All products</NavLink>
+                        <NavLink className={checkClass} to='/sales/all'>All sales</NavLink>
+                    </div>
+                    <div className={s.icons}>
+                      <div className={s.user_icon}><Link to="/account"><UserOutlined /></Link></div>
+                        <NavLink to='/basket'><img src={shopping_bag} alt="basket" />{totalItems === 0 ? '' : totalItems}</NavLink>
+                    </div>
+                </div>
+            </div>
+        <button onClick={navBtnOnClick} className={s.nav_btn}><MenuOutlined /></button>
+    </section>
   );
 }

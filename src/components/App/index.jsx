@@ -9,6 +9,7 @@ import NotFoundPage from "../../pages/NotFoundPage";
 import AllCategoriesPage from "../../pages/AllCategoriesPage";
 import ProductsPage from "../../pages/ProductsPage";
 import ProductPage from "../../pages/ProductPage";
+import AccountPage from "../../pages/AccountPage";
 
 function App() {
   
@@ -23,6 +24,7 @@ function App() {
           <Route path="category" element={<AllCategoriesPage />} />
           <Route path="category/:id" element={<ProductsPage />} />
           <Route path="product/:id" element={<ProductPage />} />
+          <Route path="account" element={<AccountPage />}/> 
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
