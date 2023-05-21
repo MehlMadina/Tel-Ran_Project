@@ -31,7 +31,7 @@
 }
 
 .social_media a:hover {
-    color: #339933;
+    color: #326d3b;
 }
 
 .social_media a {
@@ -77,12 +77,10 @@
     font-weight: 500;
 }
 
-
-
 .map iframe {
     position: absolute;
     width: 1380px;
-    height: 525px;
+    height: 450px;
     left: 0;
     top: 300px;
 }

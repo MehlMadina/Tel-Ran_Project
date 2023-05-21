@@ -16,21 +16,22 @@
 }
 
 .categories_header button {
-    font-size: 12px;
-    font-weight: 700;
-    color: #8B8B8B;
-    padding: 8px;
-    background-color: #ffffff;
-    border: 2px solid #8B8B8B;
-    width: 128px;
+    font-size: 16px;
+    color: white;
+    padding: 10px;
+    background-color: #326d3b;
+    border: 2px solid #326d3b;
+    width: 250px;
     margin-top: 40px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .categories_header button:hover {
-    background-color: #c7c7c7;
-    border: 2px solid #c7c7c7;
-    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid #326d3b;
+    color: #326d3b;
+    transition: 0.3s all;
 }
 
 .categories_group {

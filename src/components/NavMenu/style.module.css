@@ -1,11 +1,9 @@
-.nav_wrapper {
+ .nav_wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1380px;
     margin: 19px auto;
-    /* position: fixed; */
-    
 }
 
 .logo_block {
@@ -17,20 +15,22 @@
 
 .logo_block a {
     text-decoration: none;
-    background-color: #339933;
+    background-color: #326d3b;
     border-radius: 5px;
     padding: 15px 30px;
     color: white;
     font-size: 16px;
-    border: 1px solid #339933;
+    border: 1px solid #326d3b;
     cursor: pointer;
 }
 
 .logo_block a:hover {
-    background-color: #267226;
+    background-color: transparent;
+    color: #326d3b;
+    transition: 0.3s all;
 }
 
-.nav_menu {
+/* .nav_menu {
     display: flex;
     align-items: center;
     gap: 50px;
@@ -47,8 +47,86 @@
     position: absolute;
     right: 0;
     top: 0;
+}*/
+
+.links .active {
+    color: #326d3b;
+}  
+
+.links {
+    display: flex;
+    font-size: 16px;
+    gap: 50px;
 }
 
-.nav_menu .active {
-    color: #339933;
+.all_links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_btn{
+    display: none;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: black;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .nav {
+        position: relative;
+    }
+
+    .all_links a {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .all_links{
+        position: absolute;
+        right: 0;
+        top: 100px;
+        gap: 5px;
+        height: auto;
+        pointer-events: none;
+        transition-duration: 0.5s;
+        border: 1px solid black;
+        background-color: white;
+        width: 180px;
+        height: 180px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 15px;
+        font-size: 18px;
+    }
+
+    .links a {
+        border-bottom: 1px solid black;
+        text-align: center;
+    }
+
+    .secondBlock {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .links_show{
+        transform: translateX(100%);
+    }
+
+    .links_show a {
+        pointer-events: auto;
+    }
+
+    .nav_btn{
+        display: flex;
+    }
 }

@@ -3,15 +3,40 @@
     margin: 50px auto;
 }
 
+.sales_header {
+    display: flex;
+    align-items: center;
+    gap: 96px;
+}
+
 .sales_header h1 {
     font-size: 40px;
     font-weight: 700;
     margin-top: 40px;
 }
 
+.sales_header button {
+    font-size: 16px;
+    color: white;
+    padding: 10px;
+    background-color: #326d3b;
+    border: 2px solid #326d3b;
+    width: 250px;
+    margin-top: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sales_header button:hover {
+    background-color: transparent;
+    border: 1px solid #326d3b;
+    color: #326d3b;
+    transition: 0.3s all;
+}
+
 .sales_group {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 32px;
-    margin-top: 20px;
+    margin-top: 60px;
 }

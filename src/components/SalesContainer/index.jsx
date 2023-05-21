@@ -3,6 +3,7 @@ import s from "./style.module.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { asyncLoadProductsAction } from '../../store/asyncAction/allProducts';
 import ProductCard from '../ProductCard';
+import { Link } from "react-router-dom";
 
 export default function SalesContainer() {
 
@@ -17,6 +18,7 @@ useEffect(() => {
     <div className={s.sales_section}>
         <div className={s.sales_header}>
             <h1>Sale</h1>
+            <Link to="/sales/all"> <button>All sales</button></Link>
         </div>
       <div className={s.sales_group}>
         {products

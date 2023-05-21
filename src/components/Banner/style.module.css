@@ -1,5 +1,7 @@
-.banner_section {
-    background-color: #A1E2EB;
+.banner_section img {
+    width: 100%;
+    object-fit: cover;
+    height: 700px;
 }
 
 .banner_sub_section {
@@ -7,6 +9,7 @@
     justify-content: space-between;
     max-width: 1380px;
     margin: 0 auto;
+    position: relative;
 }
 
 .info {
@@ -14,28 +17,44 @@
     flex-direction: column;
     justify-content: center;
     gap: 3px;
+    position: absolute;
+    bottom: 120px;
 }
 
 .text_sale {
     font-size: 80px;
-    font-weight: 700;
-    color: #ffffff;
+    font-weight: 600;
+    color: white;
 }
 
 .text_descr {
     font-size: 63px;
-    font-weight: 700;
-    color: #ffffff;
+    font-weight: 600;
+    color: black;
+    border-bottom: 4px solid black;
 }
 
 .info a {
     display: block;
-    padding: 25px 50px;
-    background-color: #ffffff;
-    border: 2px solid white;
+    padding: 20px 50px;
+    background-color: black;
+    color: #ffffff;
+    border: 2px solid transparent;
     border-radius: 13px;
     font-size: 25px;
-    font-weight: 700;
-    width: 155px;
-    margin-top: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 160px;
+    margin-top: 30px;
+}
+
+.info a:hover {
+    background-color: transparent;
+    border: 2px solid white;
+    transition: 0.3s all;
+}
+
+.description {
+    max-width: 600px;
+    margin-top: 40px;
 }

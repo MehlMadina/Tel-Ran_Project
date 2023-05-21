@@ -1,14 +1,21 @@
 .categories_card {
-    margin-top: 20px;
+    margin-top: 40px;
     text-decoration: none;
     color: black;
 }
 
 .categories_card img {
-    height: 340px;
+    height: 320px;
     width: 320px;
-    border-radius: 10px;
+    border-radius: 50%;
+    filter: brightness(60%);
     object-fit: cover;
+}
+
+.categories_card img:hover {
+    filter: brightness(90%);
+    transition: 0.5s all;
+    transform: scale(1.03);
 }
 
 .categories_card p{
@@ -17,4 +24,5 @@
     text-align: center;
     margin-top: 20px;
     margin-bottom: 58px;
+    text-transform: uppercase;
 }

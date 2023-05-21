@@ -1,5 +1,4 @@
 import React from "react";
-import gnome from "../../media/gnome.png";
 import s from './style.module.css';
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
@@ -30,9 +29,6 @@ const phoneRegister = register('phone', {
 
   return (
     <div className={s.discount_form_section}>
-      <div>
-        <img src={gnome} alt="Gnome" />
-      </div>
       <div className={s.discount_form}>
         <h1>5% off</h1>
         <p>on the first order</p>
