@@ -1,0 +1,26 @@
+.modal_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 180px;
+}
+
+.modal_content {
+    width: 480px;
+    height: 480px;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .crossIcon {
+    font-size: 20px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+  }

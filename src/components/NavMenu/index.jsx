@@ -40,7 +40,7 @@ const navBtnOnClick = () => {
                         <NavLink className={checkClass} to='/sales/all'>All sales</NavLink>
                     </div>
                     <div className={s.icons}>
-                      <div className={s.user_icon}><Link to="/account"><UserOutlined /></Link></div>
+                      <div className={s.user_icon}><Link to="/account/registration_form"><UserOutlined /></Link></div>
                         <NavLink to='/basket'><img src={shopping_bag} alt="basket" />{totalItems === 0 ? '' : totalItems}</NavLink>
                     </div>
                 </div>
