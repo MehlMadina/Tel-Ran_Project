@@ -73,15 +73,35 @@
 .icons {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .user_icon {
-    font-size: 25px;
+    font-size: 50px;
 }
 
 .links .active {
     color: #326d3b;
+}
+
+.basket {
+    width: 23px;
+    height: 25px;
+    object-fit: cover;
+}
+
+.counter {
+    display: inline-block;
+    font-size: 12px;
+    border: 1px solid #339933;
+    border-radius: 50%;
+    background-color: #339933;
+    color: white;
+    position: relative;
+    right: 8px;
+    width: 18px;
+    text-align: center;
+    padding: 2px;
 }
 
 @media (max-width: 1000px) {

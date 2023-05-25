@@ -14,14 +14,16 @@ export default function AllSalesPage() {
   }, []);
 
   return (
-    <div className={s.products_container}>
-      <h2>All sales</h2>
-      <div className={s.products}>
-        {products
-        .filter(({ discont_price }) => discont_price !== null)
-        .map((el) => (
-          <ProductCard key={el.id} {...el}/>
-        ))}
+    <div className={s.container}>
+      <div className={s.products_container}>
+        <h2>All sales</h2>
+        <div className={s.products}>
+          {products
+            .filter(({ discont_price }) => discont_price !== null)
+            .map((el) => (
+              <ProductCard key={el.id} {...el} />
+            ))}
+        </div>
       </div>
     </div>
   );

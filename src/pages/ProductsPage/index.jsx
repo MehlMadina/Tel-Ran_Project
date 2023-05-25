@@ -20,7 +20,7 @@ export default function ProductsPage() {
   }, []);
 
   return (
-    <div>
+    <div className={s.container}>
       <div className={s.products_page}>
         {products.length === 0 ? (
           <p>Products are loading...</p>

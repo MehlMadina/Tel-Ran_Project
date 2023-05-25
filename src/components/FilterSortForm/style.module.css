@@ -1,8 +1,11 @@
 .container {
     max-width: 1380px;
-    margin: 81px auto 34px auto;
+    margin: 50px auto;
     display: flex;
     justify-content: space-between;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
 }
 
 .filter_section {
@@ -14,7 +17,7 @@
 
 .filter_section span {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .filter_section input {
@@ -29,12 +32,12 @@
 .discount_checkbox {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
 }
 
 .discount_checkbox span {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .discount_checkbox input {
@@ -50,7 +53,7 @@
 
 .sort_section span {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .sort_section select {

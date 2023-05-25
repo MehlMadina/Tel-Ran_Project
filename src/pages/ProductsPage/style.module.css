@@ -1,8 +1,20 @@
+.container {
+    background-color: #7c9c81;
+}
+
 .products_page {
     max-width: 1380px;
     margin: 0 auto;
+    padding-top: 90px;
 }
 
+.products_page h1 {
+    text-transform: uppercase;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
 
 .products {
     display: grid;
