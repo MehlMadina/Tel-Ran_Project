@@ -29,15 +29,13 @@ export default function ProductPage() {
         <>
           <div className={s.card}>
             <div className={s.left_block}>
-              <p>{title}</p>
               <img src={img} alt={title} />
             </div>
             <div className={s.right_block}>
+              <p className={s.title}>{title}</p>
               <div className={s.price_block}>
                 <p className={s.price}>
-                  {discont_price === null
-                    ? price + "$"
-                    : discont_price + "$"}
+                  {discont_price === null ? price + "$" : discont_price + "$"}
                 </p>
                 <p className={s.old_price}>
                   {discont_price === null ? "" : price + "$"}
@@ -48,10 +46,10 @@ export default function ProductPage() {
                     : `-${discount_percent.toFixed(0)}%`}
                 </p>
               </div>
-              <button onClick={add_to_basket}>To cart</button>
               <div className={s.description_block}>
                 <p className={s.description_title}>Description</p>
-                <p>{description}</p>
+                <p className={s.text}>{description}</p>
+                <button onClick={add_to_basket}>To cart</button>
               </div>
             </div>
           </div>
