@@ -113,3 +113,18 @@
     padding-bottom: 8px;
     margin-top: -15px;
 }
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: 650px;
+        margin-top: -70px;
+    }
+
+    .basket_page {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 30px;
+        margin-top: 40px;
+        gap: 40px;
+    }
+}

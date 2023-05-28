@@ -89,3 +89,18 @@
     top: 280px;
 }
 
+@media (max-width: 768px) {
+    .discount_form_section {
+        height: 600px;
+        width: 650px;
+    }
+
+    .discount_form {
+        margin-left: 90px;
+    }
+
+    .discount_form h1  {
+        font-size: 70px;
+    }
+}
+

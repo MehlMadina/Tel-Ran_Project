@@ -106,7 +106,6 @@
 
 @media (max-width: 1000px) {
     .nav {
-        position: relative;
         z-index: 1;
     }
 
@@ -160,5 +159,68 @@
     .nav_btn {
         display: block;
         margin-left: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        position: relative;
+        z-index: 1;
+    }
+
+    .all_links {
+        position: absolute;
+        left: 300px;
+        bottom: 0;
+        gap: 5px;
+        opacity: 0;
+        pointer-events: none;
+        transition-duration: 0.5s;
+        background-color: white;
+        width: 350px;
+        height: 1350px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .firstBlock {
+        margin-left: -40px;
+        gap: 20px;
+    }
+
+    .links {
+        margin-bottom: 40px;
+        flex-direction: column;
+        gap: 15px;
+        font-size: 18px;
+    }
+
+    .links a {
+        text-align: center;
+    }
+
+    .secondBlock {
+        margin-bottom: 150px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .links_show {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+
+    .links_show a {
+        pointer-events: auto;
+    }
+
+    .nav_btn {
+        display: block;
+        margin-left: 200px;
+    }
+
+    .firstBlock button {
+        position: relative;
+        left: 15px;
     }
 }

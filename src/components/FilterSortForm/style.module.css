@@ -64,4 +64,18 @@
     color: #797979;
 }
 
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 600px;
+    }
+
+    .filter_section {
+        justify-content: space-evenly;
+        gap: 5px;
+    }
+}
+
 

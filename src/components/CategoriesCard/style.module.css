@@ -25,3 +25,14 @@
     margin-bottom: 58px;
     text-transform: uppercase;
 }
+
+@media (max-width: 768px) {
+    .categories_card {
+        margin-left: 170px;
+    }
+
+    .categories_card p {
+        margin-left: 115px;
+        margin-bottom: 5px;
+    }
+}

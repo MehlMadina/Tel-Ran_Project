@@ -1,6 +1,6 @@
 .categories_section {
     max-width: 1380px;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 
 .categories_section h1 {
@@ -13,4 +13,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
     column-gap: 26px;
+}
+
+@media (max-width: 768px) {
+    .categories_section h1 {
+        text-align: center;
+        margin-left: 200px;
+    }
 }

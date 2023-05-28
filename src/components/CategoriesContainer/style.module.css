@@ -40,3 +40,9 @@
     gap: 32px;
     margin-top: 20px;
 }
+
+@media (max-width: 768px) {
+    .categories_header h1 {
+        margin-left: 75px;
+    }
+}

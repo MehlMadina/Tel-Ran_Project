@@ -68,3 +68,11 @@ a {
     opacity: 1;
     transform: translateY(-190px);
 }
+
+@media (max-width: 768px) {
+    .product_item button {
+        opacity: 1;
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+}

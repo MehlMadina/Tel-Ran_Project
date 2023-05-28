@@ -15,6 +15,10 @@ export default function AllProductsPage() {
     dispatch(asyncLoadProductsAction);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <div className={s.container}>
       <div className={s.products_container}>

@@ -90,3 +90,40 @@
     text-align: center;
     line-height: 20px;
 }
+
+@media (max-width: 768px) {
+.card {
+        flex-direction: column;
+        margin-top: 0;
+        margin-left: 45px;
+    }
+
+    .title {
+        margin-left: 100px;
+        margin-top: 20px;
+    }
+
+    .right_block button {
+        margin-left: 100px;
+        margin-bottom: 40px;
+    }
+
+    .left_block img {
+        width: 400px;
+        height: 400px;
+        margin-left: 80px;
+        margin-top: 20px;
+    }
+
+    .price_block  {
+        margin-left: 100px;
+    }
+
+    .description_title {
+        margin-left: 100px;
+    }
+
+    .text {
+        margin-left: 120px;
+    }
+}

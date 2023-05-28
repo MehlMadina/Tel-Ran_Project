@@ -46,7 +46,7 @@
     border: 2px solid transparent;
     border-radius: 13px;
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     width: 160px;
     margin-top: 30px;
@@ -61,4 +61,37 @@
 .description {
     max-width: 600px;
     margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .banner_section img {
+        height: 600px;
+        width: 650px;
+    }
+
+    .text_sale {
+        font-size: 45px;
+        text-align: center;
+    }
+
+    .text_descr {
+        font-size: 35px;
+        border-bottom: none;
+        text-align: center;
+    }
+
+    .info a {
+        position: relative;
+        top: 40px;
+        left: 120px;
+    }
+
+    .description {
+        text-align: center;
+        margin-left: 20px;
+    }
+
+    .banner_section {
+        margin-top: 0px;
+    }
 }

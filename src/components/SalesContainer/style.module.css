@@ -40,3 +40,18 @@
     gap: 32px;
     margin-top: 60px;
 }
+
+@media (max-width: 768px) {
+    .sales_section {
+        margin: 0 auto;
+    }
+
+    .sales_header {
+        margin-left: 100px;
+    }
+
+    .sales_group {
+        margin-top: 50px;
+        margin-left: 180px;
+    }
+}
