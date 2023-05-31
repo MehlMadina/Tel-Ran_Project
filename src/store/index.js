@@ -17,3 +17,17 @@ const rootReducer = combineReducers({
 });
 
 export const store = createStore(rootReducer, applyMiddleware(thunk));
+
+
+// import { configureStore } from "@reduxjs/toolkit";
+// import productsReducer from "./slice/productsSlice";
+// import basketReducer from "./slice/basketSlice";
+// import categoriesReducer from "./slice/categoriesSlice";
+
+// export const store = configureStore({
+//   reducer: {
+//     basket: basketReducer,
+//     categories: categoriesReducer,
+//     products: productsReducer
+//   },
+// });
