@@ -4,7 +4,7 @@ import BasketItem from "../../components/BasketItem";
 import s from "./style.module.css";
 // import { RightOutlined } from "@ant-design/icons";
 // import { Link } from "react-router-dom";
-import { clearBasket } from "../../store/reducer/basketReducer";
+// import { clearBasket } from "../../store/reducer/basketReducer";
 import { useForm } from "react-hook-form";
 import { order_products } from "../../store/asyncAction/products";
 
@@ -94,9 +94,9 @@ export default function BasketPage() {
 
               <div className={s.btns}>
                 <button>Order</button>
-                <button onClick={() => dispatch(clearBasket())}>
+                {/* <button onClick={() => dispatch(clearBasket())}>
                   Clear the cart
-                </button>
+                </button> */}
               </div>
             </form>
           </div>
